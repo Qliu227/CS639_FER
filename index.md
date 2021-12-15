@@ -15,6 +15,7 @@ Facial emotion recognition (FER) is achieved either by measuring the changes of 
 In this project, we will build a deep convolutional neural network (CNN) based on the model proposed by 
 Aayush Mishra (https://www.kaggle.com/aayushmishra1512/emotion-detector), which consists of five CNN modules. The model contains about 4.5 million parameters. The batch normalization and dropout techniques are used to make the model robust. The detailed structure is shown in Fig.3. 
 
+Add figure
 Figure 1. Conventional FER method. [1]
 
 Figure 2. Deep neural networks-based FER approach. [1]
