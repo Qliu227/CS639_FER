@@ -15,13 +15,13 @@ In this project, we will build a deep convolutional neural network (CNN) based o
 Aayush Mishra (https://www.kaggle.com/aayushmishra1512/emotion-detector), which consists of five CNN modules. The model contains about 4.5 million parameters. The batch normalization and dropout techniques are used to make the model robust. The detailed structure is shown in Fig.3. 
 
 <p align="center"> <img src="Fig/1.png" alt="hi" class="inline"/> </p>
-<div align="center"> Figure 1. Conventional FER method.<sup>[1]</sup> </div>
+<div align="center"> Figure 1. Conventional FER method.<sup>[1]</sup> </div>\
 
 <p align="center"> <img src="Fig/2.png" alt="hi" class="inline"/> </p>
-<div align="center"> Figure 2. Deep neural networks-based FER approach.<sup>[1]</sup> </div>
+<div align="center"> Figure 2. Deep neural networks-based FER approach.<sup>[1]</sup> </div>\
 
 <p align="center"> <img src="Fig/3.png" alt="hi" class="inline"/> </p>
-<div align="center"> Figure 3. The architecture of CNN </div>
+<div align="center"> Figure 3. The architecture of CNN </div>\
 
 Several basic components and techniques adopted in the model are briefly reviewed. 
 Convolution: The convolution kernel is used to detect edges and thus, it is also called the filter. The convolution kernel has a locality attribute, and it focuses on local features. For example, the essence of edge detection with the Sobel operator is to compare the similarity of adjacent pixels of images.
