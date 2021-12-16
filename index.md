@@ -17,12 +17,10 @@ Aayush Mishra (https://www.kaggle.com/aayushmishra1512/emotion-detector), which 
 <p align="center"> <img src="Fig/1.png" alt="hi" class="inline"/> </p>
 <p style="text-align: center;">Figure 1. Conventional FER method. [1]</p>
 
-<p align="center">
-<img src="Fig/2.png" alt="hi" class="inline"/>
+<p align="center"> <img src="Fig/2.png" alt="hi" class="inline"/>  </p>
 Figure 2. Deep neural networks-based FER approach. [1]
 
-<p align="center">
-<img src="Fig/3.png" alt="hi" class="inline"/>
+<p align="center"> <img src="Fig/3.png" alt="hi" class="inline"/>  </p>
 Figure 3. The architecture of CNN
 
 Several basic components and techniques adopted in the model are briefly reviewed. 
