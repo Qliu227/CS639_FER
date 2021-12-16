@@ -1,6 +1,6 @@
 # Facial Emotion Recognition Using Deep Convolutional Neural Network
 
-Team members  
+Team members\
 Shanchao Liang (sliang53@wisc.edu), Zhaoyang Li (zli2344@wisc.edu)
 Qitong Liu (qliu227@wisc.edu), Shirley Liu (rliu326@wisc.edu)
 
@@ -14,12 +14,16 @@ Facial emotion recognition (FER) is achieved either by measuring the changes of 
 In this project, we will build a deep convolutional neural network (CNN) based on the model proposed by 
 Aayush Mishra (https://www.kaggle.com/aayushmishra1512/emotion-detector), which consists of five CNN modules. The model contains about 4.5 million parameters. The batch normalization and dropout techniques are used to make the model robust. The detailed structure is shown in Fig.3. 
 
+<p align="center">
 <img src="Fig/1.png" alt="hi" class="inline"/>
 Figure 1. Conventional FER method. [1]
+</p>
 
+<p align="center">
 <img src="Fig/2.png" alt="hi" class="inline"/>
 Figure 2. Deep neural networks-based FER approach. [1]
 
+<p align="center">
 <img src="Fig/3.png" alt="hi" class="inline"/>
 Figure 3. The architecture of CNN
 
