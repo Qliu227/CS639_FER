@@ -16,6 +16,7 @@ Aayush Mishra (https://www.kaggle.com/aayushmishra1512/emotion-detector), which 
 
 <p align="center"> <img src="Fig/1.png" alt="hi" class="inline"/> </p>
 <p style="text-align: center;">Figure 1. Conventional FER method. [1]</p>
+<p style="text-align: center;">Centered text</p>
 
 <p align="center"> <img src="Fig/2.png" alt="hi" class="inline"/> </p>
 Figure 2. Deep neural networks-based FER approach. [1]
