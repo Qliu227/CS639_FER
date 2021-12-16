@@ -22,6 +22,7 @@ Aayush Mishra (https://www.kaggle.com/aayushmishra1512/emotion-detector), which 
 
 <p align="center"> <img src="Fig/3.png" alt="hi" class="inline"/> </p>
 <div align="center"> Figure 3. The architecture of CNN </div>\
+
 Several basic components and techniques adopted in the model are briefly reviewed. 
 Convolution: The convolution kernel is used to detect edges and thus, it is also called the filter. The convolution kernel has a locality attribute, and it focuses on local features. For example, the essence of edge detection with the Sobel operator is to compare the similarity of adjacent pixels of images.
 Activation: In the biological sense of neurons, only when the weighted sum of the signals transmitted by the previous dendrites is greater than a certain threshold, the subsequent neurons will be activated. Similarly, when the output cannot reach a certain standard or the feature in a certain area is very weak, then the feature intensity output should be 0, which is achieved by the activation function. Thus, areas not related to the feature will not affect the training of the feature extraction method. Relu is the most commonly used activation function, which was employed in this project.
