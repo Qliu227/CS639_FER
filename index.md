@@ -16,6 +16,8 @@ In this project, we will build a deep convolutional neural network (CNN) based o
 Aayush Mishra (https://www.kaggle.com/aayushmishra1512/emotion-detector), which consists of five CNN modules. The model contains about 4.5 million parameters. The batch normalization and dropout techniques are used to make the model robust. The detailed structure is shown in Fig.3. 
 
 ![image info](./Fig/1.png)
+<img src="Fig/1.png" alt="hi" class="inline"/>
+
 Figure 1. Conventional FER method. [1]
 
 Figure 2. Deep neural networks-based FER approach. [1]
