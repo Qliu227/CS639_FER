@@ -93,7 +93,7 @@ Figure 11 and 12 shows the training process and the confusion matrix of the mode
 (c)
 (d)
 
-Figure 12. Visualization of the trained CNN model by Grad-CAM:[9] (a) 1st convolution layer; (b) 2nd convolution layer; (c) 3rd convolution layer; (d) viridis palette colormap
+Figure 13. Visualization of the trained CNN model by Grad-CAM:[9] (a) 1st convolution layer; (b) 2nd convolution layer; (c) 3rd convolution layer; (d) viridis palette colormap
 
 The Gradient-weighted Class Activation Mapping (Grad-CAM) is employed to visualize the trained model.[9] The Grad-CAM performs a backward pass to obtain the gradient of the feature map and obtains the gradient corresponding to each pixel on each feature map. This gradient feature map is then normalized, and the average value of all gradient maps shows the importance of each pixel. The Viridis palette colormap is used to show the importance of the pixel. The light color yellow shows the important pixels and the dark color purple represents the least important pixels. As shown in Figure 12, an image labeled as fear emotion is used to visualize the trained CNN model. After proceeding the first two convolution layers, there is no significant pixel in the image. However, after passing the third convolution layer, important neurons are identified located around the mouth and forehead, which are the important features when recognizing fear emotion.
 
