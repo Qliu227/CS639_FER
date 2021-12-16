@@ -1,7 +1,7 @@
 # Facial Emotion Recognition Using Deep Convolutional Neural Network
 
 Team members\
-Shanchao Liang (sliang53@wisc.edu), Zhaoyang Li (zli2344@wisc.edu)
+Shanchao Liang (sliang53@wisc.edu), Zhaoyang Li (zli2344@wisc.edu) <br>
 Qitong Liu (qliu227@wisc.edu), Shirley Liu (rliu326@wisc.edu) <br>
 
 Link for presentation: https://github.com/Qliu227/CS639_FER/blob/gh-pages/presentation/CS639_FER.pptx
