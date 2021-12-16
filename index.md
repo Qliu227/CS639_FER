@@ -36,17 +36,17 @@ The Facial Expression Recognition 2013 (FER-2013) database was used in this proj
 ### 4.1 Training using the unbalanced dataset
 
 <p align="center"> <img src="Fig/4.png" alt="hi" class="inline"/> </p>
-<div align="center"> Figure 4. Distribution of facial emotion classes in the training dataset and testing dataset </div>
+<div align="center"> Figure 4. Distribution of facial emotion classes in the training dataset and testing dataset </div> <br>
 
 Figure 4 shows the facial emotion distribution for training and testing datasets. The training and testing dataset have a similar distribution. Among 7 emotions, the happy emotion has the highest portion, and it occupies ~30% of the total sample. The disgust emotion is relatively rare and only contains 3% of the total sample. The other 4 emotions (angry, fear, neutral and sad) have a comparable number of samples.
 
 <p align="center"> <img src="Fig/5.png" alt="hi" class="inline"/> </p>
-<div align="center"> Figure 5. The evolution of accuracy and loss for training and validation dataset. </div>
+<div align="center"> Figure 5. The evolution of accuracy and loss for training and validation dataset. </div> <br>
   
 The Python software was used with the TensorFlow library to build the CNN model. The model was trained on a local machine using GPU for 100 epochs. The history of accuracy and loss are shown in Fig. 5. The accuracy of the two groups initially increases with the epoch and then reaches a plateau. The accuracy of the two groups is close to each other until the 10th epochs, where the accuracy of the validation dataset becomes stable while the accuracy of the training dataset keeps increasing. Similarly, the loss of the two groups decreases and reaches the bottom at the 10th epoch. Training and validation dataset have a similar magnitude of loss until the 10th epochs,  where the loss of the training dataset keeps decreasing while the loss of the validation dataset suddenly increases. These two observations indicate the model is overfitted.
 
 <p align="center"> <img src="Fig/6.png" alt="hi" class="inline"/> </p>
-<div align="center"> Figure 6. Confusion matrix of the trained CNN model. (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral） </div>
+<div align="center"> Figure 6. Confusion matrix of the trained CNN model. (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral）</div> <br>
 
 Therefore, the final model is trained with 10 epochs, and its performance is evaluated using the validation dataset. The overall accuracy of the trained CNN model is 65%, which is comparable with the reference work. The confusion matrix of the trained CNN model is shown in Fig.6. The color patterns of the seven classes are close to each other, and the model predicts well with all testing categories. Among 7 categories, the model can predict 3rd and 6th classes (happy and neutral emotions) with ~80% of accuracy, while its forecasting on 5th class (surprise emotion) is the worst with only ~55% of accuracy. About 29% of surprise emotions is mistakenly labeled as fear and sad emotions.
 ### 4.2 Training using the balanced dataset
@@ -55,10 +55,10 @@ As shown in Fig.4, the number of images in each class in the original dataset is
 The first approach to balance data is the random undersampling method, which is achieved by using the imblearn API function RandomUnderSampler. The number of images in each emotion case equals the number of images in the minority class, and the extra images are randomly selected and removed. The model parameters remain the same except that the training epochs are extended to 100 because fewer training images require extra epochs to converge.
 
 <p align="center"> <img src="Fig/7.png" alt="hi" class="inline"/> </p>
-<div align="center"> Figure 7. The evolution of accuracy and loss for training dataset and validation dataset using undersampled data. </div>
+<div align="center"> Figure 7. The evolution of accuracy and loss for training dataset and validation dataset using undersampled data. </div> <br>
 
 <p align="center"> <img src="Fig/8.png" alt="hi" class="inline"/> </p>
-<div align="center"> Figure 8. Confusion of the CNN model trained with undersampled data.(0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral） </div>
+<div align="center"> Figure 8. Confusion of the CNN model trained with undersampled data.(0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral) </div> <br>
 
 Figure 7 shows the changes in the accuracy and loss in the training process. As expected, the model needs ~40 epochs to converge and the final accuracy is about 40%, which drops 62.5% when compared with the model using the original image. Figure 8 shows the confusion matrix of the model trained with undersampled data. The model has unsatisfied performance for all classes except the 3rd class (happy emotion).
 
@@ -67,11 +67,10 @@ Figure 7 shows the changes in the accuracy and loss in the training process. As 
 The second approach to balance data is using the oversampling method, which employs the imblearn API function RandomOverSampler. The number of images in each class equals the number of images in the majority class, and the extra image is generated by randomly replicating the existing images. The training epochs are reduced to 50 as the training dataset includes extra images.
 
 <p align="center"> <img src="Fig/9.png" alt="hi" class="inline"/> </p>
-<div align="center"> Figure 9. The evolution of accuracy and loss for training dataset and validation dataset using oversampled data. </div>
+<div align="center"> Figure 9. The evolution of accuracy and loss for training dataset and validation dataset using oversampled data. </div> <br>
 
 <p align="center"> <img src="Fig/10.png" alt="hi" class="inline"/> </p>
-<div align="center"> Figure 10. Confusion of the CNN model trained with oversampled data. </div>
-(0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral）
+<div align="center"> Figure 10. Confusion of the CNN model trained with oversampled data. (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral） </div> <br>
 
 Figure 9 and 10 shows the evolution of accuracy and loss and the confusion matrix for the model trained with oversampled data. The model needs 5 epochs to converge and the final accuracy is about 60%. The number of images in the 1st category increases the most, as well as its accuracy. However, the accuracy for other classes slightly decreases, resulting in overall decreases in performance.
 
@@ -80,18 +79,18 @@ Figure 9 and 10 shows the evolution of accuracy and loss and the confusion matri
 Another popular tool that is used to augment the training image is the ImageDataGenerator function in TensorFlow. This function applies random changes to the images in the training dataset in each training epoch. The changes include shifting or flipping the image horizontally and vertically.
 
 <p align="center"> <img src="Fig/11.png" alt="hi" class="inline"/> </p>
-<div align="center"> Figure 11. The evolution of accuracy and loss for training and validation dataset using augmented data. </div>
+<div align="center"> Figure 11. The evolution of accuracy and loss for training and validation dataset using augmented data. </div> <br>
 
 <p align="center"> <img src="Fig/12.png" alt="hi" class="inline"/> </p>
-<div align="center"> Figure 12. Confusion of the CNN model trained with augmented data. </div>
-(0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral）
+<div align="center"> Figure 12. Confusion of the CNN model trained with augmented data. (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral）</div> <br>
+
 
 Figure 11 and 12 shows the training process and the confusion matrix of the model trained with augmented data. As the input image in each epoch is changing, the accuracy approaches 70% with 60 epochs. The confusion matrix does not show significant improvement.
 
 ### 4.4 Visualization of the trained CNN model 
 
 <p align="center"> <img src="Fig/13.png" alt="hi" class="inline"/> </p>
-<div align="center"> Figure 13. Visualization of the trained CNN model by Grad-CAM:[9] (a) 1st convolution layer; (b) 2nd convolution layer; (c) 3rd convolution layer; (d) viridis palette colormap </div>
+<div align="center"> Figure 13. Visualization of the trained CNN model by Grad-CAM:[9] (a) 1st convolution layer; (b) 2nd convolution layer; (c) 3rd convolution layer; (d) viridis palette colormap </div> <br>
 
 The Gradient-weighted Class Activation Mapping (Grad-CAM) is employed to visualize the trained model.<sup>[9]</sup> The Grad-CAM performs a backward pass to obtain the gradient of the feature map and obtains the gradient corresponding to each pixel on each feature map. This gradient feature map is then normalized, and the average value of all gradient maps shows the importance of each pixel. The Viridis palette colormap is used to show the importance of the pixel. The light color yellow shows the important pixels and the dark color purple represents the least important pixels. As shown in Figure 12, an image labeled as fear emotion is used to visualize the trained CNN model. After proceeding the first two convolution layers, there is no significant pixel in the image. However, after passing the third convolution layer, important neurons are identified located around the mouth and forehead, which are the important features when recognizing fear emotion.
 
