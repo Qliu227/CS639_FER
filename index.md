@@ -16,8 +16,8 @@ Aayush Mishra (https://www.kaggle.com/aayushmishra1512/emotion-detector), which 
 
 <p align="center">
 <img src="Fig/1.png" alt="hi" class="inline"/>
-Figure 1. Conventional FER method. [1]
 </p>
+Figure 1. Conventional FER method. [1]
 
 <p align="center">
 <img src="Fig/2.png" alt="hi" class="inline"/>
